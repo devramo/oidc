@@ -1,0 +1,19 @@
+http://localhost:9000/.well-known/openid-configuration
+
+###
+http://localhost:9000/authorise?scope=openid+profile+email+loa&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ftest%2Fhome.xhtml&state=2qqLZO9gLhmVJjap5wVTT2vubjjPRivIH1B6CcHBBSg&requested-url=%2Ftest%2Fpages%2Fpage.xhtml%3Ffaces-redirect%3Dtrue%26oid%3Ddf90000050033898&nonce=-cJe5l06tSlFMWEoVAybBsqwP8jThg__BvQ1-tQTRCk&client_id=foo&loa=3
+
+###
+POST http://localhost:9000/token
+content-type: application/json
+
+{
+    "grant_type": "authorization_code",
+    "client_id": "YOUR_CLIENT_ID",
+    "client_secret": "YOUR_CLIENT_SECRET",
+    "code": "YOUR_AUTHORIZATION_CODE",
+    "redirect_uri": "http://YOUR_APP/callback"
+}
+
+###
+http://localhost:9000/certs

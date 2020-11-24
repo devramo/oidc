@@ -1,0 +1,1 @@
+[{"client":"foo","algorithm":"RS256","scopes":["openid","profile","email","loa"],"access_token_expiration": 3600, "refresh_token_expiration": 32400, "id_token_expiration": 32400,"_id":"fb560a20e181413594f2270a095d36dc"}]
